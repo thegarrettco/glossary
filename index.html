@@ -1,0 +1,719 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.container {
+    padding: 0px;
+    max-width: 3800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header {
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.accordion-question {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+.accordion-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.accordion-question.active::after {
+    content: '-';
+}
+
+.accordion-answer {
+    display: none;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.see-all-wrapper {
+    border-top: px solid #ddd;
+    margin-top: px;
+    padding-top: 20px;
+}
+
+.see-all-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.see-all-btn:hover {
+    text-decoration: underline;
+}
+
+.hidden-items {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+    }
+    .category-title {
+        font-size: 20px;
+    }
+    .accordion-question {
+        font-size: 16px;
+    }
+    .accordion-answer {
+        font-size: 14px;
+    }
+}
+</style>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Multifamily Industry Glossary</h1>
+    </div>
+
+    <p style="color:#000000;font-size:16px;font-weight:400;line-height:1.6;margin-bottom:60px">Key terms used across multifamily operations, leasing, asset management, and compliance.</p>
+
+    <!-- Affordable Housing Programs -->
+    <div class="category">
+        <div class="category-title">Affordable Housing Programs</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">AMI (Area Median Income)</div>
+            <div class="accordion-answer">The midpoint household income for a metropolitan area, published annually by HUD. Used to set income limits on affordable housing programs (e.g., 60% AMI)</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Compliance Period</div>
+            <div class="accordion-answer">The years during which a LIHTC property must meet income and rent restrictions — typically 15 years of strict compliance followed by an extended-use period of at least 15 additional years</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">HAP Contract (Housing Assistance Payments)</div>
+            <div class="accordion-answer">The agreement between HUD (or a public housing authority) and the property owner under which the government pays the difference between the tenant's contribution and the contract rent for Section 8 units</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">HOME Program</div>
+            <div class="accordion-answer">HUD block-grant program providing funds to states and localities to develop and rehabilitate affordable rental housing, often layered with LIHTC</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">HUD (U.S. Department of Housing and Urban Development)</div>
+            <div class="accordion-answer">The federal agency that administers public housing, Section 8, FHA multifamily mortgage insurance, and fair housing enforcement</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-affordable">
+            <div class="accordion-item">
+                <div class="accordion-question">Income Certification</div>
+                <div class="accordion-answer">The annual or move-in process of verifying that a household meets the income limits required to occupy a restricted unit. Tenant Income Certifications (TICs) are the standard documentation</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">LIHTC (Low-Income Housing Tax Credit)</div>
+                <div class="accordion-answer">Federal program providing tax credits to developers of affordable rental housing in exchange for income and rent restrictions, typically for a 15- to 30-year compliance period</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Live Local Act (Florida SB 102)</div>
+                <div class="accordion-answer">Florida statute signed in 2023 and amended in 2024 that preempts local zoning to allow multifamily or mixed-use residential development by-right on commercial, industrial, or mixed-use sites — including the highest density and an enhanced height allowance — when at least 40% of units are set aside as affordable to households at up to 120% AMI for 30 years. Pairs the land-use preemption with a property-tax exemption for newly constructed projects of more than 70 affordable units and a sales-tax refund on building materials. Zoning preemptions currently sunset October 1, 2033</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">LURA (Land Use Restriction Agreement)</div>
+                <div class="accordion-answer">The recorded agreement that imposes income and rent restrictions on a LIHTC property and runs with the land for the duration of the extended-use period</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Project-Based Section 8</div>
+                <div class="accordion-answer">Rental assistance tied to specific units in a property under a HAP contract, as opposed to vouchers that move with the tenant</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Section 8 Voucher</div>
+                <div class="accordion-answer">Tenant-based federal rental assistance (Housing Choice Voucher) under which the housing authority pays a portion of rent directly to a participating landlord. Landlord participation rules vary by state and locality</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Tax-Exempt Bonds</div>
+                <div class="accordion-answer">Municipal bonds used to finance affordable housing; properties financed with at least 50% tax-exempt bonds qualify for 4% LIHTC credits without competitive allocation</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-affordable')">See All (7 more)</button>
+        </div>
+    </div>
+
+    <!-- Construction & Development -->
+    <div class="category">
+        <div class="category-title">Construction &amp; Development</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Absorption</div>
+            <div class="accordion-answer">The pace at which available units are leased, typically expressed as units per month. The primary measure of lease-up velocity against pro forma</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Certificate of Occupancy (CO)</div>
+            <div class="accordion-answer">Municipal authorization that a building is safe and code-compliant for occupancy. Required before residents can move in; often issued building-by-building in phased developments</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">GMP (Guaranteed Maximum Price)</div>
+            <div class="accordion-answer">A construction contract in which the general contractor commits to deliver the project at or below a fixed ceiling, with savings typically shared or returned to the owner</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Hard Costs</div>
+            <div class="accordion-answer">Direct construction costs — site work, materials, labor, contractor fees. Distinct from soft costs</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Lease-Up</div>
+            <div class="accordion-answer">The period from a new property's first delivery of units through achieving stabilized occupancy. Performance is tracked against an absorption schedule established during underwriting</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-construction">
+            <div class="accordion-item">
+                <div class="accordion-question">Pro Forma</div>
+                <div class="accordion-answer">The projected operating statement used to underwrite a development or acquisition. Establishes the rent, expense, and timing assumptions against which actual performance is measured</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Punch Walk</div>
+                <div class="accordion-answer">A pre-delivery inspection in which the owner, GC, and architect walk a unit or building to generate the final punch list before turnover</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Soft Costs</div>
+                <div class="accordion-answer">Non-construction development expenses — architecture, engineering, permits, legal, financing, marketing, lease-up reserves</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Stabilization</div>
+                <div class="accordion-answer">The point at which a property reaches sustained occupancy (commonly 90–93%) and operations normalize. Triggers lender milestones and is the standard cutoff for switching from development to operating financials</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Temporary Certificate of Occupancy (TCO)</div>
+                <div class="accordion-answer">An interim CO issued when most but not all final inspections are complete, allowing occupancy while remaining items (often site work or amenities) are finished</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-construction')">See All (5 more)</button>
+        </div>
+    </div>
+
+    <!-- Financial & Operations -->
+    <div class="category">
+        <div class="category-title">Financial &amp; Operations</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Capital Expenditure (CapEx)</div>
+            <div class="accordion-answer">Non-recurring spending on improvements that extend a property's useful life — roof replacements, unit renovations, amenity upgrades. Distinct from routine repairs and maintenance</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Capitalization Rate (Cap Rate)</div>
+            <div class="accordion-answer">The ratio of a property's net operating income to its purchase price or current market value, expressed as a percentage. A primary metric used to compare returns across investment properties</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Debt Service Coverage Ratio (DSCR)</div>
+            <div class="accordion-answer">NOI divided by annual debt service. Lenders typically require a minimum DSCR (often 1.20x–1.25x) to underwrite a multifamily loan</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Economic Occupancy</div>
+            <div class="accordion-answer">Actual rent collected as a percentage of gross potential rent. Differs from physical occupancy by accounting for concessions, bad debt, and loss-to-lease</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Gross Potential Rent (GPR)</div>
+            <div class="accordion-answer">The total rental income a property would generate if every unit were occupied at market rent. The baseline against which vacancy and concessions are measured</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-financial">
+            <div class="accordion-item">
+                <div class="accordion-question">Loss to Lease</div>
+                <div class="accordion-answer">The difference between market rent and the actual rent on in-place leases. A key indicator of pricing opportunity at renewal</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Net Operating Income (NOI)</div>
+                <div class="accordion-answer">Gross operating income less operating expenses, before debt service, capital expenditures, and income taxes. The core measure of a property's operating performance</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Operating Expense Ratio (OER)</div>
+                <div class="accordion-answer">Operating expenses as a percentage of effective gross income. Used to benchmark efficiency across comparable properties</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Physical Occupancy</div>
+                <div class="accordion-answer">The percentage of units physically occupied by a resident, regardless of whether rent is being collected</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Trailing Twelve Months (T-12)</div>
+                <div class="accordion-answer">A rolling twelve-month financial statement used to evaluate recent operating performance during acquisition or refinance underwriting</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-financial')">See All (5 more)</button>
+        </div>
+    </div>
+
+    <!-- Insurance & Risk -->
+    <div class="category">
+        <div class="category-title">Insurance &amp; Risk</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Actual Cash Value (ACV)</div>
+            <div class="accordion-answer">An insurance valuation method that pays replacement cost minus depreciation. Generally less favorable for owners than replacement cost coverage</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Business Interruption / Loss of Rents</div>
+            <div class="accordion-answer">Coverage for lost rental income while a property is being repaired after a covered loss. Typically expressed as a number of months of coverage</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Certificate of Insurance (COI)</div>
+            <div class="accordion-answer">Documentation evidencing that a vendor, contractor, or resident carries required insurance coverage. Standard prerequisite for vendor onboarding and renter's insurance compliance programs</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Deductible</div>
+            <div class="accordion-answer">The portion of a covered loss the property pays before insurance responds. Often stated as a per-occurrence dollar amount or a percentage of insured value for catastrophe perils</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">General Liability (GL)</div>
+            <div class="accordion-answer">Coverage for third-party bodily injury and property damage occurring on the property. The foundational liability policy for any multifamily asset</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-insurance">
+            <div class="accordion-item">
+                <div class="accordion-question">Named Storm / Wind Deductible</div>
+                <div class="accordion-answer">A separate, typically percentage-based deductible that applies to losses from named hurricanes or windstorms. Material in coastal markets</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Property Insurance</div>
+                <div class="accordion-answer">First-party coverage for physical damage to buildings and contents from covered perils. Carried by the owner and reflected as an operating expense line</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Renter's Insurance Compliance Program</div>
+                <div class="accordion-answer">An owner-administered program (often vendor-supported) requiring residents to carry liability and/or contents coverage and tracking compliance through the lease term</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Replacement Cost</div>
+                <div class="accordion-answer">An insurance valuation method that pays to rebuild without depreciation deduction. Preferred coverage standard for multifamily owners</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Umbrella / Excess Liability</div>
+                <div class="accordion-answer">Liability coverage that sits above primary GL and auto policies, providing additional limits across underlying coverages. Commonly required by lenders and JV partners</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-insurance')">See All (5 more)</button>
+        </div>
+    </div>
+
+    <!-- Investor & Capital Structure -->
+    <div class="category">
+        <div class="category-title">Investor &amp; Capital Structure</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Acquisition Fee</div>
+            <div class="accordion-answer">A one-time fee paid to the sponsor at closing, typically 0.5%–2% of the purchase price, compensating for sourcing and underwriting work</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Asset Management Fee</div>
+            <div class="accordion-answer">A recurring fee paid to the sponsor — usually a percentage of effective gross revenue or invested equity — for ongoing oversight of the investment</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Cash-on-Cash Return</div>
+            <div class="accordion-answer">Annual pre-tax cash flow divided by total equity invested. The most common LP-level return metric for stabilized cash flow</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Equity Multiple (EM)</div>
+            <div class="accordion-answer">Total dollars distributed divided by total equity invested over the hold period. Measures absolute return independent of timing</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">GP / LP (General Partner / Limited Partner)</div>
+            <div class="accordion-answer">The sponsor (GP) makes operating decisions and is liable for the partnership; passive investors (LPs) contribute most of the equity and have limited liability</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-investor">
+            <div class="accordion-item">
+                <div class="accordion-question">Internal Rate of Return (IRR)</div>
+                <div class="accordion-answer">The discount rate at which the net present value of all cash flows equals zero. The standard time-weighted return measure used to evaluate multifamily investments</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Joint Venture (JV)</div>
+                <div class="accordion-answer">A partnership between a sponsor and an institutional equity partner, typically with a promote structure that rewards the sponsor for exceeding agreed return hurdles</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Mezzanine Debt</div>
+                <div class="accordion-answer">Subordinate financing that sits between the senior loan and equity, secured by a pledge of ownership interests rather than the real estate. Higher cost than senior debt; preserves equity dollars</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Preferred Equity</div>
+                <div class="accordion-answer">Equity capital that receives a fixed return ahead of common equity but lacks operating control. Often used as a gap-filler alongside senior debt</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Preferred Return (Pref)</div>
+                <div class="accordion-answer">The annual return LPs receive before the GP shares in profits — typically 7%–9% in multifamily. May be cumulative or non-cumulative</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Promote / Carried Interest</div>
+                <div class="accordion-answer">The sponsor's disproportionate share of profits earned after LPs receive their preferred return. Often structured in tiers (waterfall) tied to IRR or equity-multiple hurdles</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Waterfall</div>
+                <div class="accordion-answer">The contractual order in which distributions flow among partners — return of capital, preferred return, then promote tiers. Defined in the operating agreement</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-investor')">See All (7 more)</button>
+        </div>
+    </div>
+
+    <!-- Leasing & Marketing -->
+    <div class="category">
+        <div class="category-title">Leasing &amp; Marketing</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Closing Ratio</div>
+            <div class="accordion-answer">Leases signed divided by qualified traffic. Measures leasing-team effectiveness independent of marketing volume</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Concession</div>
+            <div class="accordion-answer">Any rent reduction or incentive offered to attract or retain a resident — free weeks, waived fees, gift cards. Tracked separately from base rent</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Days on Market (DOM)</div>
+            <div class="accordion-answer">The average number of days a unit remains vacant before being leased. A leading indicator of pricing or product issues</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Effective Rent</div>
+            <div class="accordion-answer">Stated rent less the amortized value of concessions over the lease term. The true revenue figure used in market comparisons</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Exposure</div>
+            <div class="accordion-answer">Units currently vacant plus units on notice to vacate. The forward-looking view of inventory available to lease</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-leasing">
+            <div class="accordion-item">
+                <div class="accordion-question">Market Rent</div>
+                <div class="accordion-answer">The rent a unit would command if leased today under current market conditions, independent of in-place lease terms</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Notice to Vacate (NTV)</div>
+                <div class="accordion-answer">Written notice from a resident of intent to move out at lease end or with proper notice. Triggers turn scheduling and re-marketing</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Renewal Ratio</div>
+                <div class="accordion-answer">The percentage of expiring leases that renew within a given period. A core retention KPI; benchmarks typically run 50–60%</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Revenue Management</div>
+                <div class="accordion-answer">Algorithmic or rules-based pricing that adjusts rents daily based on demand, exposure, and competitive set. Common platforms include LRO, YieldStar, and AIRM</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Traffic</div>
+                <div class="accordion-answer">Prospective residents who tour, inquire, or apply. Lead-source attribution of traffic drives marketing spend decisions</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-leasing')">See All (5 more)</button>
+        </div>
+    </div>
+
+    <!-- Legal & Compliance -->
+    <div class="category">
+        <div class="category-title">Legal &amp; Compliance</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">ADA (Americans with Disabilities Act)</div>
+            <div class="accordion-answer">Federal accessibility law applicable to public and common areas of multifamily properties. Distinct from the FHA design and construction requirements that apply to units</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Eviction</div>
+            <div class="accordion-answer">The legal process by which a landlord regains possession of a unit, typically for non-payment of rent or material lease violation. Governed by state-specific procedure and timelines</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Fair Housing Act (FHA)</div>
+            <div class="accordion-answer">Federal law prohibiting housing discrimination based on race, color, religion, sex, national origin, familial status, or disability. State and local laws often add protected classes</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Lease Addendum</div>
+            <div class="accordion-answer">A document attached to and incorporated into the lease that adds, modifies, or clarifies specific terms — pet policy, parking, smoking, lead-based paint disclosure</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Reasonable Accommodation</div>
+            <div class="accordion-answer">A change in rules, policies, or services to allow a resident with a disability equal opportunity to use and enjoy the dwelling. Must be granted unless it imposes an undue burden</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-legal">
+            <div class="accordion-item">
+                <div class="accordion-question">Security Deposit</div>
+                <div class="accordion-answer">Funds held by the landlord to cover damages beyond normal wear and tear or unpaid rent. State law dictates handling, accounting, and return timelines</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-legal')">See All (1 more)</button>
+        </div>
+    </div>
+
+    <!-- Physical Asset & Maintenance -->
+    <div class="category">
+        <div class="category-title">Physical Asset &amp; Maintenance</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Common Area</div>
+            <div class="accordion-answer">Property areas shared by residents — leasing office, fitness center, pool, hallways, parking. Maintenance costs are reflected in operating expenses, not unit pricing</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Deferred Maintenance</div>
+            <div class="accordion-answer">Repairs and replacements that have been postponed beyond their normal cycle. A standard diligence item; quantified in inspection reports</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Make-Ready</div>
+            <div class="accordion-answer">A unit that has completed the turn process and is available to lease and move in. Tracked daily against exposure</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Preventive Maintenance (PM)</div>
+            <div class="accordion-answer">Scheduled service on building systems — HVAC, boilers, pool equipment — performed to extend useful life and avoid failure. Tracked by work-order systems</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Punch List</div>
+            <div class="accordion-answer">The itemized list of remaining repairs or finishes on a new construction or renovated unit prior to delivery</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-physical">
+            <div class="accordion-item">
+                <div class="accordion-question">Submetering</div>
+                <div class="accordion-answer">Individual measurement of utility usage at the unit level (water, electric, gas), enabling resident billback rather than bundling into rent</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Unit Turn</div>
+                <div class="accordion-answer">The process of preparing a vacated unit for the next resident — cleaning, painting, repairs, inspection. Turn time directly impacts vacancy loss</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Value-Add</div>
+                <div class="accordion-answer">An investment strategy involving targeted capital improvements (in-unit renovations, amenity upgrades, exterior refresh) to drive rent growth and asset value</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-physical')">See All (3 more)</button>
+        </div>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="category">
+        <div class="category-title">Technology Stack</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">AI Leasing Assistant</div>
+            <div class="accordion-answer">Conversational tools (chat, email, SMS, voice) that respond to prospect inquiries, qualify leads, and schedule tours 24/7. Examples include Lisa, Betty, Quext, and Meet Elise</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Business Intelligence (BI)</div>
+            <div class="accordion-answer">Reporting and analytics platforms that consolidate PMS, CRM, and operational data into dashboards — portfolio occupancy, leasing velocity, expense variance. Examples include RealPage IMS, Yardi Elevate, and custom Power BI stacks</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">CRM (Customer Relationship Management)</div>
+            <div class="accordion-answer">Software that tracks prospects through the leasing funnel — inquiries, tours, applications, follow-ups. Often integrated with the PMS; examples include Knock, Funnel, and Yardi RentCafe CRM</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">ILS (Internet Listing Service)</div>
+            <div class="accordion-answer">Third-party rental marketplaces where vacant units are advertised — Apartments.com, Zillow, Rent.com, ApartmentList. A primary traffic source and major marketing-budget line</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">PMS (Property Management System)</div>
+            <div class="accordion-answer">The system of record for unit inventory, leases, rent roll, accounting, and resident data. Common platforms include Yardi Voyager, RealPage OneSite, Entrata, ResMan, and AppFolio</div>
+        </div>
+
+        <div class="hidden-items" id="hidden-tech">
+            <div class="accordion-item">
+                <div class="accordion-question">Self-Guided Tour (SGT)</div>
+                <div class="accordion-answer">A prospect-led tour using temporary access credentials issued after identity verification. Extends touring hours and reduces leasing-team load; requires smart-lock and ID-verification infrastructure</div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">Smart Home Technology</div>
+                <div class="accordion-answer">Connected in-unit devices — smart locks, thermostats, leak sensors, lighting — managed centrally. Enables self-guided tours, contactless turn, and operational efficiency</div>
+            </div>
+        </div>
+
+        <div class="see-all-wrapper">
+            <button class="see-all-btn" onclick="toggleSeeAll(this, 'hidden-tech')">See All (2 more)</button>
+        </div>
+    </div>
+
+    <!-- Utility Billing & Ancillary Income -->
+    <div class="category">
+        <div class="category-title">Utility Billing &amp; Ancillary Income</div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Ancillary Income</div>
+            <div class="accordion-answer">Non-rent revenue streams — pet rent, parking, storage, application fees, late fees, valet trash, utility reimbursements. A key lever for total income growth without raising base rent</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Pet Rent</div>
+            <div class="accordion-answer">A recurring monthly fee charged in addition to a one-time pet deposit or non-refundable pet fee. Distinct from service or emotional support animals, which cannot be charged under fair housing rules</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">RUBS (Ratio Utility Billing System)</div>
+            <div class="accordion-answer">A method of allocating master-metered utility costs to residents based on a formula — typically occupants, square footage, or a blend — when submetering is not feasible. Subject to state-specific disclosure and calculation rules</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Utility Reimbursement</div>
+            <div class="accordion-answer">Resident-paid charges that offset the property's utility expense, recovered via submetering or RUBS. Typically shown net against utility expense in financial reporting</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-question">Valet Trash</div>
+            <div class="accordion-answer">A doorstep waste-collection service in which residents leave trash outside their unit on scheduled nights for pickup. Billed as a monthly fee separate from rent; a common ancillary income line</div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const questions = document.querySelectorAll('.accordion-question');
+    
+    questions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
+    });
+});
+
+function toggleSeeAll(btn, hiddenId) {
+    const hiddenEl = document.getElementById(hiddenId);
+    const isHidden = hiddenEl.style.display === 'none' || hiddenEl.style.display === '';
+
+    if (isHidden) {
+        hiddenEl.style.display = 'block';
+        const count = hiddenEl.querySelectorAll('.accordion-item').length;
+        btn.textContent = 'See Less';
+    } else {
+        hiddenEl.style.display = 'none';
+        const count = hiddenEl.querySelectorAll('.accordion-item').length;
+        const label = count === 1 ? '1 more' : count + ' more';
+        btn.textContent = 'See All (' + label + ')';
+    }
+}
+</script>
+</body>
+</html>
