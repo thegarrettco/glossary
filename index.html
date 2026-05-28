@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #000000;
+    color: #333e4e;
     background-color: #ffffff;
 }
 
@@ -20,17 +20,52 @@ body {
 }
 
 .header {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .header h1 {
     font-size: 36px;
-    font-weight: 300;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: #0070b9;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.22;
+    margin-top: -4px;
+
+    /* optional */
+    transform: rotate(-6deg);
+}
+
+.intro-divider {
+    height: 2px;
+    width: 100%;
+    margin: 0 0 40px 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0,112,185,0.95),
+        rgba(0,112,185,0.15)
+    );
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 10px rgba(0,112,185,0.18),
+        0 1px 2px rgba(0,0,0,0.08);
 }
 
 .category {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .category-title {
@@ -38,7 +73,7 @@ body {
     font-weight: 600;
     margin-top: 40px;
     margin-bottom: 10px;
-    color: #000000;
+    color: #333e4e;
 }
 
 .accordion-item {
@@ -85,7 +120,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    color: #000000;
+    color: #333e4e;
     background: none;
     border: none;
     cursor: pointer;
@@ -120,11 +155,22 @@ body {
 <body>
 <div class="container">
     <div class="header">
-        <h1>Multifamily Industry Glossary</h1>
-    </div>
+    <h1>
+        Multifamily Industry Glossary
 
-    <p style="color:#000000;font-size:16px;font-weight:400;line-height:1.6;margin-bottom:60px">Key terms used across multifamily operations, leasing, asset management, and compliance.</p>
+        <img
+            class="header-icon"
+            src="https://static.wixstatic.com/shapes/4f7dd4_4d648340c95544eda4d6d89793c850a2.svg"
+            alt="Glossary Icon"
+        />
+    </h1>
+</div>
 
+<p style="color:#333e4e;font-size:16px;font-weight:400;line-height:1.6;margin-bottom:24px;margin-top:-12px">
+    <i>Key terms used across multifamily operations, leasing, asset management, and compliance.</i>
+</p>
+
+<div class="intro-divider"></div>
     <!-- Affordable Housing Programs -->
     <div class="category">
         <div class="category-title">Affordable Housing Programs</div>
